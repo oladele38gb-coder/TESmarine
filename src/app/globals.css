@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+ * TES Marine brand tokens.
+ * Colours are sampled from the vector logo in the brand guide (the guide's own
+ * colour page has hex/RGB mismatches, so the logo artwork is the source of truth).
+ */
+@theme {
+  --color-ink: #14183f; /* deep navy: text, dark sections */
+  --color-indigo: #373c99; /* "TES MARINE" wordmark */
+  --color-blue: #3473c2; /* "& ENERGY" wordmark, links */
+  --color-sky: #488ed3; /* logo icon square */
+  --color-aqua: #bee6f1; /* pale aqua from the guide */
+  --color-mist: #eef6fa; /* light section background */
+  --color-line: #d6e6ef; /* borders on light backgrounds */
+  --color-slate: #4a5170; /* secondary text (passes 4.5:1 on white and mist) */
+  --color-orange: #f47c20; /* complementary accent: primary buttons, rules */
+  --color-orange-bright: #ff8f3a;
+
+  --font-display: "Saira", "Eurostile", "Arial Narrow", sans-serif; /* stand-in for Eurostile */
+  --font-body: "Questrial", "Century Gothic", "Futura", sans-serif; /* stand-in for Century Gothic */
+  --font-label: "Aleo", Georgia, serif; /* brand guide label face */
+
+  --animate-marquee: marquee 45s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    /* Sticky header is 64px (76px on lg); keep anchored headings clear of it. */
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-site {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-inline: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .container-site {
+      padding-inline: 40px;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-label);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
