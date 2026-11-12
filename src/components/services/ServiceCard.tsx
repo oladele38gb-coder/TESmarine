@@ -10,7 +10,7 @@ export function ServiceCard({ service: s, sizes }: { service: Service; sizes: st
   return (
     <Link
       href={`/services/${s.slug}`}
-      className="group relative block h-[420px] overflow-hidden rounded-[2px] text-white no-underline lg:h-[500px]"
+      className="group relative block h-[340px] overflow-hidden sm:h-[420px] rounded-[2px] text-white no-underline lg:h-[500px]"
     >
       <Image
         src={s.image.src}
@@ -23,9 +23,9 @@ export function ServiceCard({ service: s, sizes }: { service: Service; sizes: st
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,24,63,0)_30%,rgba(20,24,63,0.94)_100%)]"
       />
-      <span className="absolute inset-x-0 bottom-0 p-7">
+      <span className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
         <span className="mb-4.5 block h-[3px] w-10 bg-orange transition-[width] duration-400 group-hover:w-18" />
-        <span className="block font-display text-[26px] leading-[1.15]">{s.title}</span>
+        <span className="block font-display text-[22px] leading-[1.15] sm:text-[26px]">{s.title}</span>
         <span className="grid grid-rows-[1fr] opacity-100 transition-all duration-450 [@media(hover:hover)]:grid-rows-[0fr] [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:grid-rows-[1fr] [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-focus-visible:grid-rows-[1fr] [@media(hover:hover)]:group-focus-visible:opacity-100">
           <span className="overflow-hidden">
             <span className="block pt-3.5 text-[15px] leading-[1.55] text-[#DCEBF3]">{s.summary}</span>

@@ -18,7 +18,7 @@ function FilterButton({ pressed, onClick, children }: { pressed: boolean; onClic
       type="button"
       aria-pressed={pressed}
       onClick={onClick}
-      className={`min-h-11 cursor-pointer border px-4 text-sm transition-colors ${
+      className={`min-h-11 shrink-0 cursor-pointer border px-4 text-sm whitespace-nowrap transition-colors ${
         pressed ? "border-ink bg-ink text-white" : "border-line bg-white text-ink hover:border-blue hover:text-blue"
       }`}
     >
@@ -41,10 +41,10 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div className="mb-10 flex flex-col gap-6 border-b border-line pb-8 lg:flex-row lg:items-end lg:justify-between">
-        <fieldset>
+      <div className="mb-8 flex flex-col gap-5 border-b border-line pb-6 sm:mb-10 sm:gap-6 sm:pb-8 lg:flex-row lg:items-end lg:justify-between">
+        <fieldset className="min-w-0">
           <legend className="eyebrow mb-3 text-slate">Service</legend>
-          <div className="flex flex-wrap gap-2">
+          <div className="relative -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden">
             <FilterButton pressed={line === "all"} onClick={() => setLine("all")}>
               All services
             </FilterButton>
@@ -55,9 +55,9 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
             ))}
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset className="min-w-0">
           <legend className="eyebrow mb-3 text-slate">Status</legend>
-          <div className="flex flex-wrap gap-2">
+          <div className="relative -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden">
             {statusOptions.map((s) => (
               <FilterButton key={s.value} pressed={status === s.value} onClick={() => setStatus(s.value)}>
                 {s.label}

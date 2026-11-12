@@ -15,17 +15,17 @@ export default function Page() {
 
   return (
     <>
-      <section className="bg-mist pt-24 pb-16">
+      <section className="bg-mist pt-14 md:pt-24 pb-12 md:pb-16">
         <div className="container-site">
           <p className="eyebrow mb-4 text-blue">Projects</p>
-          <h1 className="max-w-3xl font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+          <h1 className="max-w-3xl font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
             Selected projects since 2013
           </h1>
           <p className="mt-6 max-w-2xl text-slate">
             Diving support, pipeline and subsea installation, inspection and rope access work for operators and
             contractors in the Niger Delta, from Escravos to Otakikpo.
           </p>
-          <dl className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
+          <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:mt-10 sm:flex sm:flex-wrap sm:gap-x-12 sm:gap-y-6">
             {[
               { value: projects.length, label: "Projects listed" },
               { value: ongoing, label: "Ongoing" },
@@ -35,14 +35,14 @@ export default function Page() {
             ].map((f) => (
               <div key={f.label} className="flex flex-col-reverse">
                 <dt className="text-sm text-slate">{f.label}</dt>
-                <dd className="font-display text-4xl font-light text-indigo">{f.value}</dd>
+                <dd className="font-display text-3xl font-light text-indigo sm:text-4xl">{f.value}</dd>
               </div>
             ))}
           </dl>
         </div>
       </section>
 
-      <section className="bg-mist pb-28">
+      <section className="bg-mist pb-16 md:pb-28">
         <div className="container-site">
           <ProjectsExplorer projects={projects} />
         </div>

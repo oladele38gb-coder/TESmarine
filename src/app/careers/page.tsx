@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     "Work offshore with TES Marine & Energy: divers, rope access technicians, marine crew, engineers and support staff across the Niger Delta.",
 };
 
-const cvHref = (role?: string) =>
-  `mailto:${careersEmail}?subject=${encodeURIComponent(`Careers: ${role ?? "CV"}`)}`;
+const cvHref = (role?: string) => `mailto:${careersEmail}?subject=${encodeURIComponent(`Careers: ${role ?? "CV"}`)}`;
 
 export default function Page() {
   // Hidden for now; see `careersEnabled` in src/content/careers.ts.
@@ -21,10 +20,10 @@ export default function Page() {
     <>
       {/* Intro: copy + photo */}
       <section className="bg-mist">
-        <div className="container-site grid grid-cols-1 items-center gap-10 py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
+        <div className="container-site grid grid-cols-1 items-center gap-10 py-12 md:py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <p className="eyebrow mb-4 text-blue">Careers</p>
-            <h1 className="font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+            <h1 className="font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
               Work offshore with TES
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate">
@@ -52,9 +51,9 @@ export default function Page() {
       </section>
 
       {/* Why TES */}
-      <section aria-labelledby="why-heading" className="py-20">
+      <section aria-labelledby="why-heading" className="py-12 md:py-20">
         <div className="container-site">
-          <h2 id="why-heading" className="mb-12 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="why-heading" className="mb-8 sm:mb-12 font-display text-[26px] font-light text-ink sm:text-4xl">
             Why work with us
           </h2>
           <ul className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -70,9 +69,9 @@ export default function Page() {
       </section>
 
       {/* Open roles */}
-      <section aria-labelledby="openings-heading" className="border-y border-line bg-mist py-20">
+      <section aria-labelledby="openings-heading" className="border-y border-line bg-mist py-12 md:py-20">
         <div className="container-site">
-          <h2 id="openings-heading" className="mb-8 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="openings-heading" className="mb-8 font-display text-[26px] font-light text-ink sm:text-4xl">
             Open roles
           </h2>
           {openings.length > 0 ? (
@@ -113,9 +112,9 @@ export default function Page() {
       </section>
 
       {/* Disciplines */}
-      <section id="roles" aria-labelledby="roles-heading" className="py-20">
+      <section id="roles" aria-labelledby="roles-heading" className="py-12 md:py-20">
         <div className="container-site">
-          <h2 id="roles-heading" className="font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="roles-heading" className="font-display text-[26px] font-light text-ink sm:text-4xl">
             Roles our work involves
           </h2>
           <p className="mt-4 mb-12 max-w-2xl text-slate">
@@ -140,11 +139,11 @@ export default function Page() {
       </section>
 
       {/* How to apply */}
-      <section aria-labelledby="apply-heading" className="bg-ink py-20 text-white">
+      <section aria-labelledby="apply-heading" className="bg-ink py-12 md:py-20 text-white">
         <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="eyebrow mb-4 text-aqua">How to apply</p>
-            <h2 id="apply-heading" className="font-display text-3xl font-light sm:text-4xl">
+            <h2 id="apply-heading" className="font-display text-[26px] font-light sm:text-4xl">
               Send us your CV
             </h2>
             <ol className="mt-8 flex flex-col gap-5">

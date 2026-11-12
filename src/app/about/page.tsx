@@ -39,20 +39,20 @@ export default function Page() {
   return (
     <>
       {/* Intro */}
-      <section className="bg-mist pt-24 pb-16">
+      <section className="bg-mist pt-14 md:pt-24 pb-12 md:pb-16">
         <div className="container-site">
           <p className="eyebrow mb-4 text-blue">About us</p>
-          <h1 className="max-w-4xl font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+          <h1 className="max-w-4xl font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
             A Nigerian marine and offshore services company, built around its own fleet and its own people
           </h1>
         </div>
       </section>
 
       {/* Story: copy + photo */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-site grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-20">
-          <div className="flex flex-col gap-5 text-lg text-slate">
-            <h2 className="font-display text-3xl font-light text-ink sm:text-4xl">Our story</h2>
+          <div className="flex flex-col gap-4 text-base text-slate sm:gap-5 sm:text-lg">
+            <h2 className="font-display text-[26px] font-light text-ink sm:text-4xl">Our story</h2>
             {story.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
@@ -60,7 +60,7 @@ export default function Page() {
               Part of the <strong className="font-medium text-ink">{company.group}</strong>.
             </p>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[16/10] overflow-hidden lg:aspect-[4/5]">
             <Image
               src="/images/work/installation-crew.jpg"
               alt="TES crew on deck preparing for a dive beside a buoy"
@@ -78,29 +78,29 @@ export default function Page() {
           {figures.map((f) => (
             <div
               key={f.label}
-              className="flex flex-col-reverse border-line px-2 py-10 odd:border-r lg:border-r lg:px-8 lg:last:border-r-0"
+              className="flex flex-col-reverse border-line px-3 py-6 odd:border-r sm:py-10 lg:border-r lg:px-8 lg:last:border-r-0 [&:nth-child(-n+2)]:border-b lg:[&:nth-child(-n+2)]:border-b-0"
             >
               <dt className="mt-2 text-sm text-slate">{f.label}</dt>
-              <dd className="font-display text-4xl font-light text-indigo sm:text-5xl">{f.value}</dd>
+              <dd className="font-display text-[30px] font-light text-indigo sm:text-5xl">{f.value}</dd>
             </div>
           ))}
         </dl>
       </section>
 
       {/* How we deliver: diagram beside list */}
-      <section aria-labelledby="approach-heading" className="bg-mist py-24">
+      <section aria-labelledby="approach-heading" className="bg-mist py-14 md:py-24">
         <div className="container-site grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="mx-auto w-full max-w-[520px]">
+          <div className="mx-auto w-full max-w-[280px] sm:max-w-[420px] lg:max-w-[520px]">
             <ApproachDiagram />
           </div>
           <div>
             <p className="eyebrow mb-4 text-blue">How we deliver</p>
-            <h2 id="approach-heading" className="font-display text-3xl font-light text-ink sm:text-4xl">
+            <h2 id="approach-heading" className="font-display text-[26px] font-light text-ink sm:text-4xl">
               Four things we control, so your scope stays on track
             </h2>
             <ol className="mt-10 flex flex-col">
               {approach.map((a, i) => (
-                <li key={a.title} className="flex gap-5 border-t border-line py-6 last:border-b">
+                <li key={a.title} className="flex gap-4 border-t border-line py-5 last:border-b sm:gap-5 sm:py-6">
                   <span className="font-label text-[13px] font-bold tracking-[0.1em] text-orange">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -116,19 +116,19 @@ export default function Page() {
       </section>
 
       {/* Timeline */}
-      <section aria-labelledby="timeline-heading" className="py-24">
+      <section aria-labelledby="timeline-heading" className="py-14 md:py-24">
         <div className="container-site">
-          <h2 id="timeline-heading" className="mb-12 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="timeline-heading" className="mb-8 sm:mb-12 font-display text-[26px] font-light text-ink sm:text-4xl">
             Milestones
           </h2>
           <ol className="relative border-l-2 border-line pl-8 sm:pl-12">
             {milestones.map((m) => (
-              <li key={m.year} className="relative pb-12 last:pb-0">
+              <li key={m.year} className="relative pb-8 last:pb-0 sm:pb-12">
                 <span
                   aria-hidden="true"
                   className="absolute top-2 -left-[41px] size-4 rounded-full border-4 border-white bg-orange ring-2 ring-line sm:-left-[57px]"
                 />
-                <h3 className="font-display text-3xl font-light text-indigo">{m.year}</h3>
+                <h3 className="font-display text-2xl font-light text-indigo sm:text-3xl">{m.year}</h3>
                 <ul className="mt-3 flex max-w-3xl flex-col gap-2 text-ink">
                   {m.items.map((item) => (
                     <li key={item}>{item}</li>
@@ -141,13 +141,13 @@ export default function Page() {
       </section>
 
       {/* Values */}
-      <section aria-labelledby="values-heading" className="bg-ink py-24 text-white">
+      <section aria-labelledby="values-heading" className="bg-ink py-14 md:py-24 text-white">
         <div className="container-site">
           <p className="eyebrow mb-4 text-aqua">What we stand for</p>
-          <h2 id="values-heading" className="max-w-2xl font-display text-3xl font-light sm:text-4xl">
+          <h2 id="values-heading" className="max-w-2xl font-display text-[26px] font-light sm:text-4xl">
             Safety is our watchword
           </h2>
-          <ul className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-7 sm:mt-12 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
             {values.map((v) => (
               <li key={v.title}>
                 <span aria-hidden="true" className="mb-4 block h-[3px] w-10 bg-orange" />
@@ -166,9 +166,12 @@ export default function Page() {
       </section>
 
       {/* Leadership */}
-      <section aria-labelledby="leadership-heading" className="py-24">
+      <section aria-labelledby="leadership-heading" className="py-14 md:py-24">
         <div className="container-site">
-          <h2 id="leadership-heading" className="mb-10 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2
+            id="leadership-heading"
+            className="mb-7 sm:mb-10 font-display text-[26px] font-light text-ink sm:text-4xl"
+          >
             Leadership
           </h2>
           {/* Leaders with a bio: photo beside the bio. The source photo is 234 px wide, so it is shown near that size. */}
@@ -236,7 +239,7 @@ export default function Page() {
       </section>
 
       {/* Credentials strip */}
-      <section aria-labelledby="creds-heading" className="border-t border-line bg-mist py-16">
+      <section aria-labelledby="creds-heading" className="border-t border-line bg-mist py-12 md:py-16">
         <div className="container-site flex flex-wrap items-center justify-between gap-8">
           <h2 id="creds-heading" className="font-display text-2xl text-ink">
             Certified and permitted
@@ -254,7 +257,7 @@ export default function Page() {
           </ul>
           <Link
             href="/hse"
-            className="font-display text-sm font-medium tracking-[0.06em] text-blue uppercase no-underline hover:text-indigo"
+            className="inline-flex min-h-11 items-center font-display text-sm font-medium tracking-[0.06em] text-blue uppercase no-underline hover:text-indigo"
           >
             Certificates and permits →
           </Link>

@@ -7,10 +7,10 @@ export const metadata: Metadata = { title: "Page not found" };
 
 export default function NotFound() {
   return (
-    <section className="bg-mist py-32">
+    <section className="bg-mist py-16 md:py-32">
       <div className="container-site max-w-3xl">
         <p className="eyebrow mb-4 text-blue">404</p>
-        <h1 className="font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+        <h1 className="font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
           We couldn’t find that page
         </h1>
         <p className="mt-6 text-slate">It may have moved since our new website launched. Try one of these instead:</p>

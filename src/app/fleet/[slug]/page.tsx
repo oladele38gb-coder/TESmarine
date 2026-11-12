@@ -13,7 +13,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/fleet/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const vessel = fleet.find((v) => v.slug === slug);
-  return vessel ? { title: vessel.name, description: `${vessel.name}, ${vessel.type.toLowerCase()} owned by TES Marine & Energy: ${vessel.headline}. Available for time charter.` } : { title: "Fleet" };
+  return vessel
+    ? {
+        title: vessel.name,
+        description: `${vessel.name}, ${vessel.type.toLowerCase()} owned by TES Marine & Energy: ${vessel.headline}. Available for time charter.`,
+      }
+    : { title: "Fleet" };
 }
 
 export default async function VesselPage({ params }: PageProps<"/fleet/[slug]">) {
@@ -25,7 +30,7 @@ export default async function VesselPage({ params }: PageProps<"/fleet/[slug]">)
   return (
     <>
       <section className="bg-mist">
-        <div className="container-site grid grid-cols-1 items-center gap-10 py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
+        <div className="container-site grid grid-cols-1 items-center gap-7 py-8 sm:gap-10 md:py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
           <div>
             <nav aria-label="Breadcrumb" className="mb-6 text-sm text-slate">
               <Link href="/fleet" className="text-blue hover:text-indigo">
@@ -47,26 +52,35 @@ export default async function VesselPage({ params }: PageProps<"/fleet/[slug]">)
                 </div>
               ))}
             </dl>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <ButtonLink href={`/contact?vessel=${vessel.slug}`}>Request availability</ButtonLink>
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+              <ButtonLink href={`/contact?vessel=${vessel.slug}`} className="w-full justify-center sm:w-auto">
+                Request availability
+              </ButtonLink>
               <a
                 href={vessel.specSheet.href}
                 download
-                className="inline-flex min-h-12 items-center gap-2.5 rounded-[2px] border border-ink px-6 font-display text-[15px] font-medium tracking-[0.06em] text-ink uppercase no-underline transition-colors hover:bg-ink hover:text-white"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 rounded-[2px] border border-ink px-6 sm:w-auto font-display text-[15px] font-medium tracking-[0.06em] text-ink uppercase no-underline transition-colors hover:bg-ink hover:text-white"
               >
                 Spec sheet <span className="text-[13px] font-normal normal-case">({vessel.specSheet.sizeLabel})</span>
               </a>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image src={vessel.image.src} alt={vessel.image.alt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          <div className="relative order-first aspect-[4/3] overflow-hidden lg:order-none">
+            <Image
+              src={vessel.image.src}
+              alt={vessel.image.alt}
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-site">
-          <h2 className="mb-10 font-display text-3xl font-light text-ink sm:text-4xl">Specifications</h2>
+          <h2 className="mb-7 sm:mb-10 font-display text-[26px] font-light text-ink sm:text-4xl">Specifications</h2>
           <SpecTable groups={vessel.specs} />
           <p className="mt-10 text-sm text-slate">
             Figures from the vessel’s registry certificate and TES spec sheet. Confirm details for your scope with our
@@ -75,7 +89,7 @@ export default async function VesselPage({ params }: PageProps<"/fleet/[slug]">)
         </div>
       </section>
 
-      <section className="border-t border-line bg-mist py-16">
+      <section className="border-t border-line bg-mist py-12 md:py-16">
         <div className="container-site">
           <h2 className="eyebrow mb-6 text-blue">Also in the fleet</h2>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -86,7 +100,9 @@ export default async function VesselPage({ params }: PageProps<"/fleet/[slug]">)
                     <Image src={v.image.src} alt="" fill sizes="112px" className="object-cover" />
                   </div>
                   <div>
-                    <p className="font-display text-xl font-medium text-ink uppercase group-hover:text-blue">{v.name}</p>
+                    <p className="font-display text-xl font-medium text-ink uppercase group-hover:text-blue">
+                      {v.name}
+                    </p>
                     <p className="text-sm text-slate">{v.headline}</p>
                   </div>
                 </Link>

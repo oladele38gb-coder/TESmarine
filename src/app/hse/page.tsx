@@ -21,10 +21,10 @@ const fmt = (n: number) => n.toLocaleString("en-GB");
 export default function Page() {
   return (
     <>
-      <section className="bg-mist pt-24 pb-16">
+      <section className="bg-mist pt-14 md:pt-24 pb-12 md:pb-16">
         <div className="container-site">
           <p className="eyebrow mb-4 text-blue">HSE &amp; sustainability</p>
-          <h1 className="max-w-3xl font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+          <h1 className="max-w-3xl font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
             Safety is our watchword
           </h1>
           <p className="mt-6 max-w-2xl text-slate">{hsePolicy.statement}</p>
@@ -32,9 +32,9 @@ export default function Page() {
       </section>
 
       {/* Safety record */}
-      <section aria-labelledby="record-heading" className="py-20">
+      <section aria-labelledby="record-heading" className="py-12 md:py-20">
         <div className="container-site">
-          <h2 id="record-heading" className="mb-3 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="record-heading" className="mb-3 font-display text-[26px] font-light text-ink sm:text-4xl">
             Our safety record
           </h2>
           <p className="mb-10 max-w-2xl text-slate">
@@ -42,9 +42,9 @@ export default function Page() {
             incidents in any of those years.
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[480px] border-collapse text-left">
+            <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="border-b-2 border-ink text-sm text-slate">
+                <tr className="border-b-2 border-ink align-bottom text-[13px] leading-snug text-slate sm:text-sm">
                   <th scope="col" className="py-3 pr-4 font-normal">
                     Year
                   </th>
@@ -56,7 +56,7 @@ export default function Page() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="font-display text-2xl text-indigo">
+              <tbody className="font-display text-xl text-indigo sm:text-2xl">
                 {hseStats.map((y) => (
                   <tr key={y.year} className="border-b border-line">
                     <th scope="row" className="py-4 pr-4 font-normal text-ink">
@@ -68,7 +68,7 @@ export default function Page() {
                 ))}
               </tbody>
               <tfoot>
-                <tr className="font-display text-2xl">
+                <tr className="font-display text-xl sm:text-2xl">
                   <th scope="row" className="py-4 pr-4 font-medium text-ink">
                     Total
                   </th>
@@ -78,17 +78,15 @@ export default function Page() {
               </tfoot>
             </table>
           </div>
-          <p className="mt-4 text-sm text-slate">
-            TRIR = recordable incidents × 200,000 ÷ total man-hours.
-          </p>
+          <p className="mt-4 text-sm text-slate">TRIR = recordable incidents × 200,000 ÷ total man-hours.</p>
         </div>
       </section>
 
       {/* Policy: SLB-style split */}
       <section aria-labelledby="policy-heading" className="grid grid-cols-1 border-y border-line lg:grid-cols-2">
-        <div className="px-5 py-20 sm:px-10 lg:py-24 lg:pr-16 lg:pl-[max(40px,calc((100vw-1280px)/2+40px))]">
+        <div className="px-5 py-12 md:py-20 sm:px-10 lg:py-24 lg:pr-16 lg:pl-[max(40px,calc((100vw-1280px)/2+40px))]">
           <p className="eyebrow mb-4 text-blue">HSE policy</p>
-          <h2 id="policy-heading" className="font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="policy-heading" className="font-display text-[26px] font-light text-ink sm:text-4xl">
             What we commit to
           </h2>
           <h3 className="mt-8 mb-3 font-display text-lg font-medium text-ink">We ensure</h3>
@@ -116,7 +114,7 @@ export default function Page() {
             </footer>
           </blockquote>
         </div>
-        <div className="relative min-h-[420px]">
+        <div className="relative min-h-[260px] sm:min-h-[420px]">
           <Image
             src="/images/work/rescue-boat.jpg"
             alt="Rescue boat being lowered from a TES vessel"
@@ -128,9 +126,9 @@ export default function Page() {
       </section>
 
       {/* Certifications */}
-      <section aria-labelledby="certs-heading" className="bg-mist py-20">
+      <section aria-labelledby="certs-heading" className="bg-mist py-12 md:py-20">
         <div className="container-site">
-          <h2 id="certs-heading" className="mb-10 font-display text-3xl font-light text-ink sm:text-4xl">
+          <h2 id="certs-heading" className="mb-7 sm:mb-10 font-display text-[26px] font-light text-ink sm:text-4xl">
             Certifications
           </h2>
           <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -144,7 +142,9 @@ export default function Page() {
             ))}
           </ul>
 
-          <h2 className="mt-20 mb-3 font-display text-3xl font-light text-ink sm:text-4xl">Oil and gas service permits</h2>
+          <h2 className="mt-20 mb-3 font-display text-[26px] font-light text-ink sm:text-4xl">
+            Oil and gas service permits
+          </h2>
           <p className="mb-10 max-w-2xl text-slate">
             TES holds current permits to operate as an oil and gas industry service company from both of Nigeria’s
             petroleum regulators.
@@ -158,7 +158,10 @@ export default function Page() {
                   {permits
                     .filter((p) => p.regulator === reg)
                     .map((p) => (
-                      <li key={p.category} className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-b border-line py-4">
+                      <li
+                        key={p.category}
+                        className="flex flex-wrap justify-between gap-x-6 gap-y-1 border-b border-line py-4"
+                      >
                         <div>
                           <p className="text-ink">{p.category}</p>
                           <p className="text-sm text-slate">{p.scope.join(" · ")}</p>

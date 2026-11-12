@@ -20,27 +20,29 @@ export default function Page() {
       <section className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative h-64 sm:h-80 lg:sticky lg:top-[76px] lg:h-[calc(100vh-76px)]">
           <div className="absolute inset-0">
-          <Image
-            src="/images/hero-tes-crystal.jpg"
-            alt="TES Crystal at sea"
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,24,63,0.15)_40%,rgba(20,24,63,0.85)_100%)]"
-          />
-          <p className="absolute inset-x-0 bottom-0 hidden p-10 font-display text-3xl leading-tight font-light text-white lg:block xl:p-14">
-            Safety is our watchword.
-          </p>
+            <Image
+              src="/images/hero-tes-crystal.jpg"
+              alt="TES Crystal at sea"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,24,63,0.15)_40%,rgba(20,24,63,0.85)_100%)]"
+            />
+            <p className="absolute inset-x-0 bottom-0 hidden p-10 font-display text-3xl leading-tight font-light text-white lg:block xl:p-14">
+              Safety is our watchword.
+            </p>
           </div>
         </div>
 
-        <div className="px-5 py-16 sm:px-10 lg:px-14 lg:py-20 xl:px-20">
+        <div className="px-5 py-12 md:py-16 sm:px-10 lg:px-14 lg:py-20 xl:px-20">
           <p className="eyebrow mb-4 text-blue">Contact</p>
-          <h1 className="font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">Tell us about your scope</h1>
+          <h1 className="font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
+            Tell us about your scope
+          </h1>
           <p className="mt-5 max-w-xl text-slate">
             Vessel charter, diving, installation or rope access: send us the details and the right person will get back
             to you within one working day.
@@ -50,7 +52,10 @@ export default function Page() {
             <div>
               <dt className="eyebrow mb-1.5 text-slate">Call</dt>
               <dd>
-                <a href={company.phoneHref} className="inline-flex min-h-11 items-center font-display text-xl text-ink hover:text-blue">
+                <a
+                  href={company.phoneHref}
+                  className="inline-flex min-h-11 items-center font-display text-xl text-ink hover:text-blue"
+                >
                   {company.phone}
                 </a>
               </dd>
@@ -58,7 +63,10 @@ export default function Page() {
             <div>
               <dt className="eyebrow mb-1.5 text-slate">Email</dt>
               <dd>
-                <a href={`mailto:${company.email}`} className="inline-flex min-h-11 items-center font-display text-xl whitespace-nowrap text-ink hover:text-blue">
+                <a
+                  href={`mailto:${company.email}`}
+                  className="inline-flex min-h-11 items-center font-display text-xl whitespace-nowrap text-ink hover:text-blue"
+                >
                   {company.email}
                 </a>
               </dd>
@@ -67,7 +75,10 @@ export default function Page() {
               <div>
                 <dt className="eyebrow mb-1.5 text-slate">WhatsApp</dt>
                 <dd>
-                  <a href={whatsapp} className="inline-flex min-h-11 items-center font-display text-xl text-ink hover:text-blue">
+                  <a
+                    href={whatsapp}
+                    className="inline-flex min-h-11 items-center font-display text-xl text-ink hover:text-blue"
+                  >
                     Message us
                   </a>
                 </dd>
@@ -77,7 +88,10 @@ export default function Page() {
               <dt className="eyebrow mb-1.5 text-slate">Office</dt>
               <dd className="text-ink">
                 <address className="not-italic">{fullAddress}</address>
-                <a href={company.address.mapUrl} className="mt-1 inline-flex min-h-11 items-center text-sm text-blue hover:text-indigo">
+                <a
+                  href={company.address.mapUrl}
+                  className="mt-1 inline-flex min-h-11 items-center text-sm text-blue hover:text-indigo"
+                >
                   Open in Google Maps →
                 </a>
               </dd>

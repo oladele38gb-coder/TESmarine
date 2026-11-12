@@ -13,25 +13,31 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className="bg-mist pt-24 pb-16">
+      <section className="bg-mist pt-14 md:pt-24 pb-12 md:pb-16">
         <div className="container-site">
           <p className="eyebrow mb-4 text-blue">Fleet</p>
-          <h1 className="max-w-3xl font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+          <h1 className="max-w-3xl font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
             Owned, crewed and ready to charter
           </h1>
           <p className="mt-6 max-w-2xl text-slate">
-            Three Nigerian-flagged vessels, owned outright by TES and registered in Lagos. Each has four-point mooring and
-            a 5 t air-winch launch and recovery system for diving operations.
+            Three Nigerian-flagged vessels, owned outright by TES and registered in Lagos. Each has four-point mooring
+            and a 5 t air-winch launch and recovery system for diving operations.
           </p>
         </div>
       </section>
 
-      <section className="pt-16 pb-28">
+      <section className="pt-12 md:pt-16 pb-16 md:pb-28">
         <div className="container-site flex flex-col gap-20">
           {fleet.map((v, i) => (
             <article key={v.slug} className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div className={`relative aspect-[4/3] overflow-hidden ${i % 2 ? "lg:order-2" : ""}`}>
-                <Image src={v.image.src} alt={v.image.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+                <Image
+                  src={v.image.src}
+                  alt={v.image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <p className="eyebrow mb-3 text-blue">{v.type}</p>

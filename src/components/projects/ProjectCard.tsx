@@ -8,9 +8,9 @@ export function ProjectCard({ project: p }: { project: Project }) {
 
   return (
     <article className="flex h-full flex-col border border-line bg-white">
-      <div className="flex h-32 items-center border-b border-line px-7">
+      <div className="flex h-24 items-center border-b border-line px-5 sm:h-32 sm:px-7">
         {client?.logo ? (
-          <div className="flex h-20 max-w-[220px] items-center">
+          <div className="flex h-16 max-w-[180px] items-center sm:h-20 sm:max-w-[220px]">
             <ClientLogo client={client} />
           </div>
         ) : (
@@ -18,7 +18,7 @@ export function ProjectCard({ project: p }: { project: Project }) {
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-7">
+      <div className="flex flex-1 flex-col p-5 sm:p-7">
         <p className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate">
           <span>{p.period}</span>
           {p.ongoing && (
@@ -28,8 +28,8 @@ export function ProjectCard({ project: p }: { project: Project }) {
             </span>
           )}
         </p>
-        <h3 className="mb-3 font-display text-2xl leading-snug text-ink">{p.title}</h3>
-        <p className="mb-6 text-slate">{p.scope}</p>
+        <h3 className="mb-3 font-display text-xl leading-snug text-ink sm:text-2xl">{p.title}</h3>
+        <p className="mb-5 text-[15px] text-slate sm:mb-6 sm:text-base">{p.scope}</p>
         <p className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-[13px]">
           {/* The logo already names the client; repeat it as text only when a logo is shown. */}
           {client?.logo && <span className="text-slate">{p.client}</span>}

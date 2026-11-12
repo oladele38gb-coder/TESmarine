@@ -7,11 +7,17 @@ export function Footer() {
   const { address, social } = company;
 
   return (
-    <footer className="bg-mist pt-22 pb-10">
+    <footer className="bg-mist pt-14 md:pt-22 pb-10">
       <div className="container-site">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3">
           <div>
-            <Image src="/brand/tes-logo.svg" alt={company.name} width={448} height={121} className="h-16 w-auto" />
+            <Image
+              src="/brand/tes-logo.svg"
+              alt={company.name}
+              width={448}
+              height={121}
+              className="h-12 w-auto sm:h-16"
+            />
             <p className="mt-6 text-[15px] text-slate">
               An upstream oil and gas services company and member of the {company.group}.
             </p>
@@ -19,7 +25,7 @@ export function Footer() {
 
           <div>
             <h2 className="mb-4.5 font-display text-sm font-medium tracking-widest uppercase">Company</h2>
-            <ul className="flex flex-col gap-2.5 text-[15px]">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-1 text-[15px] sm:flex sm:flex-col sm:gap-2.5">
               {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-ink no-underline hover:text-blue">

@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className="bg-mist pt-24 pb-16">
+      <section className="bg-mist pt-14 md:pt-24 pb-12 md:pb-16">
         <div className="container-site">
           <p className="eyebrow mb-4 text-blue">Services</p>
-          <h1 className="max-w-3xl font-display text-4xl leading-[1.1] font-light text-ink sm:text-5xl">
+          <h1 className="max-w-3xl font-display text-[30px] leading-[1.1] font-light text-ink sm:text-5xl">
             Everything an offshore scope needs, from one crew
           </h1>
           <p className="mt-6 max-w-2xl text-slate">{servicesIntro}</p>
         </div>
       </section>
 
-      <section className="pt-16 pb-20">
+      <section className="pt-12 md:pt-16 pb-12 md:pb-20">
         <div className="container-site">
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
@@ -35,7 +35,11 @@ export default function Page() {
           <p className="mx-auto mt-14 max-w-2xl text-center font-display text-xl text-ink">{servicesCommitment}</p>
           <ul className="mt-8 flex flex-wrap justify-center gap-2" aria-label="Certifications and permits">
             {certifications.map((c) => (
-              <li key={c.name} className="border border-line bg-white px-3 py-1.5 text-[13px] text-ink" title={c.detail}>
+              <li
+                key={c.name}
+                className="border border-line bg-white px-3 py-1.5 text-[13px] text-ink"
+                title={c.detail}
+              >
                 {c.short}
               </li>
             ))}

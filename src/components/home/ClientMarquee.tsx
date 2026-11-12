@@ -9,7 +9,7 @@ import { clients, partners } from "@/content/clients";
  */
 export function ClientMarquee() {
   return (
-    <section aria-labelledby="clients-heading" className="border-t border-line bg-white py-24 text-ink">
+    <section aria-labelledby="clients-heading" className="border-t border-line bg-white py-14 md:py-24 text-ink">
       <div className="container-site">
         <h2 id="clients-heading" className="eyebrow mb-12 text-center text-blue">
           Trusted by operators and contractors
