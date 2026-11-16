@@ -35,20 +35,20 @@ export const services: Service[] = [
     summary:
       "Time charter of our three owned, Nigerian-flagged utility and diving support vessels, with four-point mooring and a 5 t LARS on each.",
     intro:
-      "TES owns and operates three Nigerian-flagged vessels, Smyrna, TES Crystal and TES Grace, available on time charter for diving support, utility and standby work. Each has four-point mooring, a 5 t air-winch launch and recovery system and Fi-Fi 1 fire-fighting.",
+      "TES owns and operates three Nigerian-flagged vessels, TES Smyrna, TES Crystal and TES Grace, available on time charter for diving support, utility and standby work. Each has four-point mooring, a 5 t air-winch launch and recovery system and Fi-Fi 1 fire-fighting.",
     capabilities: [
       "Time charter and vessel hire, within our ISO 9001:2015 certified scope",
       "Diving support vessel leasing, under an NMDPRA permit",
       "Four-point mooring and 5 t air-winch LARS on all three vessels",
       "Fi-Fi 1 fire-fighting with water spray",
       "Deck cranes from 8 t to 15.4 t, and accommodation for 20 to 33 persons",
-      "Bureau Veritas class for Smyrna, ABS class for TES Crystal",
+      "Bureau Veritas class for TES Smyrna, ABS class for TES Crystal",
     ],
     projectLines: [],
     permitCategories: ["Vessel leasing"],
     credentials: ["ISO 9001:2015", "Bureau Veritas class", "NCDMB Marine Vessel Certificate", "Nigerian registry"],
     showFleet: true,
-    image: { src: "/images/vessels/tes-smyrna.jpg", alt: "Smyrna at sea" },
+    image: { src: "/images/vessels/tes-smyrna.jpg", alt: "TES Smyrna at sea" },
   },
   {
     slug: "diving-subsea",

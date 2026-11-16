@@ -17,9 +17,9 @@ export function ClientMarquee() {
       </div>
 
       <div className="group overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-        <ul className="flex w-max animate-marquee items-center gap-16 pr-16 group-hover:[animation-play-state:paused] motion-reduce:w-auto motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-y-8 motion-reduce:px-5">
+        <ul className="flex w-max animate-marquee items-center gap-14 pr-14 group-hover:[animation-play-state:paused] motion-reduce:w-auto motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-y-8 motion-reduce:px-5">
           {clients.map((c) => (
-            <li key={c.name} className="flex h-20 w-48 shrink-0 items-center justify-center text-center">
+            <li key={c.name} className="flex h-20 shrink-0 items-center justify-center text-center">
               <ClientLogo client={c} area={6000} maxWidth={176} maxHeight={60} loading="eager" />
             </li>
           ))}
@@ -27,7 +27,7 @@ export function ClientMarquee() {
             <li
               key={`dup-${c.name}`}
               aria-hidden="true"
-              className="flex h-20 w-48 shrink-0 items-center justify-center text-center motion-reduce:hidden"
+              className="flex h-20 shrink-0 items-center justify-center text-center motion-reduce:hidden"
             >
               <ClientLogo client={c} area={6000} maxWidth={176} maxHeight={60} loading="eager" />
             </li>
@@ -38,9 +38,11 @@ export function ClientMarquee() {
       <div className="container-site">
         <div className="mt-18 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 border-t border-line pt-10">
           <h3 className="eyebrow text-blue">Partners</h3>
-          <ul className="flex flex-wrap justify-center gap-x-12 gap-y-3 font-display text-xl text-ink">
+          <ul className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
             {partners.map((p) => (
-              <li key={p}>{p}</li>
+              <li key={p.name} className="flex h-16 items-center">
+                <ClientLogo client={p} area={7000} maxWidth={170} maxHeight={64} />
+              </li>
             ))}
           </ul>
         </div>

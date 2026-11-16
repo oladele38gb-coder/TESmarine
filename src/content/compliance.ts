@@ -29,7 +29,7 @@ export const certificationsDetailed: Credential[] = [
   {
     name: "Bureau Veritas class",
     issuer: "Bureau Veritas Marine & Offshore",
-    detail: "Smyrna classed I ✠HULL ✠MACH, supply vessel / fire-fighting ship, unrestricted navigation.",
+    detail: "TES Smyrna classed I ✠HULL ✠MACH, supply vessel / fire-fighting ship, unrestricted navigation.",
     validUntil: "May 2028",
   },
   {

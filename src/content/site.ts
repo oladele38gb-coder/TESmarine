@@ -84,11 +84,11 @@ export const legalNav: NavItem[] = [
 /** Homepage key-figures strip. Update quarterly (or move to the CMS). */
 export const keyFigures = [
   { value: "2013", label: "Supporting Chevron Nigeria with rope access since" },
-  { value: "3", label: "Owned vessels: Smyrna, TES Crystal, TES Grace" },
+  { value: "3", label: "Owned vessels: TES Smyrna, TES Crystal, TES Grace" },
   // Derived from projects.ts so it never goes stale.
   {
     value: String(projects.length),
-    label: `Named offshore projects for ${new Set(projects.map((p) => p.client)).size} operators and contractors`,
+    label: `Offshore projects for ${new Set(projects.map((p) => p.client)).size} operators and contractors`,
   },
   // From TES's 3-year HSE statistics (885,826 hours, 2023–2025), rounded down.
   {

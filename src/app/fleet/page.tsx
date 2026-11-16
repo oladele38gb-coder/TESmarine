@@ -7,7 +7,7 @@ import { fleet } from "@/content/fleet";
 export const metadata: Metadata = {
   title: "Fleet",
   description:
-    "Smyrna, TES Crystal and TES Grace: Nigerian-flagged utility and diving support vessels owned and operated by TES Marine & Energy, available for time charter.",
+    "TES Smyrna, TES Crystal and TES Grace: Nigerian-flagged utility and diving support vessels owned and operated by TES Marine & Energy, available for time charter.",
 };
 
 export default function Page() {

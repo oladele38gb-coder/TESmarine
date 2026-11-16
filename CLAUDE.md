@@ -68,12 +68,12 @@ The full written recommendations are in the "TES Marine Website Revamp — Recom
 
 Do not invent these. Leave `[bracketed placeholders]` until answered.
 
-- Vessel names follow the NIMASA registry: "Smyrna" (no TES prefix), "TES Crystal", "TES Grace" (no hyphens). Confirm the brand wants these.
-- Vessel data conflicts: TES Grace year (registry 2015, spec 2014), engine power (596 vs 576 kW), class (spec says ABS, registry none; class hidden until confirmed); Smyrna tonnage (registry 986/295 used; spec 1,025/308) and its spec sheet lists 1,600 bhp under "emergency generator".
+- Vessel names: "TES Smyrna", "TES Crystal", "TES Grace" (team lead asked for a TES prefix on all three, Nov 2026). The NIMASA registry and Bureau Veritas list Smyrna without "TES"; spec tables and certificates on the site should say so if TES wants exact registry names.
+- Vessel data conflicts: TES Grace year (registry 2015, spec 2014), engine power (596 vs 576 kW), class (spec says ABS, registry none; class hidden until confirmed); TES Smyrna tonnage (registry 986/295 used; spec 1,025/308) and its spec sheet lists 1,600 bhp under "emergency generator".
 - Expired or expiring permits with no renewal supplied: NUPRC Rope access (exp. 17 Sep 2026), Special transportation (30 Oct 2026), ROV and Survey (6 Nov 2026). Not shown on the site. Rope access matters most, as it is a headline service.
 - HSE statistics sheet says "consecutive zero-LTI years: 0" alongside TRIR 0; that row is not published.
 - Real scope for "Escravos Export Terminal FSO UWILD" (the old site and TES's doc both copied the LPG FSO text; the site currently just restates the title)
-- Permission to show each client's logo; full partner list
+- Permission to show each client's and partner's logo; full partner list. Partner logos for Baola Energy and Foltoks Energy Resources came from their own websites; CNS International has no confirmable website, so it shows as a name until TES sends a logo.
 - Footer shows certification/regulator logos (`public/images/certifications/`, from each body's official site): Bureau Veritas mark for ISO 9001 (ISO's own logo is not allowed for certified firms), IRATA, NUPRC, NMDPRA, NCDMB, NIMASA. TES should confirm it may display each, especially the government regulators' emblems.
 - Leadership: the About page shows Bolaji Shenjobi, Managing Director (signs the HSE policy as "Mobolaji"); photo and background taken from sister company FUNDiT Finance's site (fundit.com.ng/teams). Need the rest of the TES team, roles, bios and photos, and TES to approve his bio. Also mission/vision, a CapitalCorp Group description, and TES's own "Our Strategy" wording (the About page's "How we deliver" list is drawn from their documents as a stand-in).
 - Confirm TES Crystal (Aug 2024) and TES Grace (Oct 2025) registry dates are first Nigerian registrations, as the About timeline says.

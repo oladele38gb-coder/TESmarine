@@ -30,10 +30,14 @@ export function ProjectCard({ project: p }: { project: Project }) {
         </p>
         <h3 className="mb-3 font-display text-xl leading-snug text-ink sm:text-2xl">{p.title}</h3>
         <p className="mb-5 text-[15px] text-slate sm:mb-6 sm:text-base">{p.scope}</p>
-        <p className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-[13px]">
-          {/* The logo already names the client; repeat it as text only when a logo is shown. */}
-          {client?.logo && <span className="text-slate">{p.client}</span>}
-          <span className="bg-[#E1EFF7] px-3 py-1.5 tracking-[0.06em] text-indigo uppercase">{p.serviceLine}</span>
+        {/* One line: short client name left, service right. Full name stays available as a tooltip and to screen readers. */}
+        <p className="mt-auto flex items-center justify-between gap-3 border-t border-line pt-5 text-[13px]">
+          <span className="min-w-0 truncate text-slate" title={p.client}>
+            {client?.short ?? p.client}
+          </span>
+          <span className="shrink-0 bg-[#E1EFF7] px-3 py-1.5 tracking-[0.06em] whitespace-nowrap text-indigo uppercase">
+            {p.serviceLine}
+          </span>
         </p>
       </div>
     </article>

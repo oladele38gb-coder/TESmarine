@@ -16,7 +16,7 @@ export const story = [
 export const approach = [
   {
     title: "Our own fleet",
-    body: "Smyrna, TES Crystal and TES Grace are owned outright, registered in Lagos and fitted for diving support, so we control availability, crewing and maintenance.",
+    body: "TES Smyrna, TES Crystal and TES Grace are owned outright, registered in Lagos and fitted for diving support, so we control availability, crewing and maintenance.",
   },
   {
     title: "Certified people",

@@ -117,7 +117,7 @@ The contact form's rate limit is in-memory, per server instance. On serverless h
 - [ ] **Legal review** of the Terms of service and privacy notice (a draft written for how this site works; includes NDPA 2023 duties)
 - [ ] **Expired NUPRC permits:** Rope access (expired 17 Sep 2026) and Special transportation; ROV and Survey expired 6 Nov 2026. They're hidden from the site until renewals arrive
 - [ ] Real scope for the "Escravos Export Terminal FSO UWILD" project (the site currently restates the title)
-- [ ] Vessel data conflicts (TES Grace year, engine power and class; Smyrna tonnage)
+- [ ] Vessel data conflicts (TES Grace year, engine power and class; TES Smyrna tonnage)
 - [ ] Permission to show client logos, especially ExxonMobil, Shell, NLNG and Oando, which came from the old site and were taken from those companies' websites
 - [ ] Rest of the leadership team (photos and bios), and sign-off on Bolaji Shenjobi's bio (adapted from sister company FUNDiT Finance's site)
 - [ ] One photo per service (current ones are stand-ins), original high-res photos and any drone footage for the hero

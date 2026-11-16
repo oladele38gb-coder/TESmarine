@@ -28,7 +28,7 @@ export default function Page() {
     { value: String(fleet.length), label: "Owned, Nigerian-flagged vessels" },
     {
       value: String(projects.length),
-      label: `Named projects for ${new Set(projects.map((p) => p.client)).size} clients`,
+      label: `Projects for ${new Set(projects.map((p) => p.client)).size} clients`,
     },
     {
       value: `${Math.floor(totalLtiFreeManHours / 1000)}k+`,

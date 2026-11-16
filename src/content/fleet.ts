@@ -2,7 +2,7 @@
  * Fleet data. Sources (supplied by TES in "WEBSITE DOC", Nov 2026):
  * - NIMASA Certificates of Nigerian Registry (official name, IMO, call sign, year/place built, tonnage)
  * - TES spec sheets (dimensions, capacities, machinery, deck equipment)
- * - Bureau Veritas certificate of classification (Smyrna), NCDMB marine vessel certificate (TES Crystal)
+ * - Bureau Veritas certificate of classification (TES Smyrna), NCDMB marine vessel certificate (TES Crystal)
  * Where the registry and a spec sheet disagree, the registry wins; disagreements are noted inline.
  * Deliberately left out: MMSI, official numbers, crew/manning, radio licences, survey records.
  */
@@ -28,9 +28,9 @@ export type Vessel = {
 export const fleet: Vessel[] = [
   {
     slug: "tes-smyrna",
-    name: "Smyrna",
+    name: "TES Smyrna",
     type: "Utility and fire-fighting support vessel",
-    image: { src: "/images/vessels/tes-smyrna.jpg", alt: "Smyrna at sea" },
+    image: { src: "/images/vessels/tes-smyrna.jpg", alt: "TES Smyrna at sea" },
     headline: "48 m utility vessel · 40 t bollard pull · 33 persons",
     summary:
       "Bureau Veritas-classed for unrestricted navigation, with Fi-Fi 1 water spray, four-point mooring, a 5 t air-winch LARS and accommodation for 33.",
