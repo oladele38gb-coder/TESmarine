@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ApproachDiagram } from "@/components/about/ApproachDiagram";
 import { CtaBand } from "@/components/home/CtaBand";
-import { approach, leadership, milestones, story, values } from "@/content/about";
+import { approach, milestones, story, values } from "@/content/about";
 import { totalLtiFreeManHours } from "@/content/compliance";
 import { fleet } from "@/content/fleet";
 import { projects } from "@/content/projects";
@@ -14,13 +14,6 @@ export const metadata: Metadata = {
   description:
     "TES Marine and Energy Services is a Lagos-based marine and offshore services company in the CapitalCorp Group, supporting Chevron Nigeria and other operators since 2013.",
 };
-
-const initials = (name: string) =>
-  name
-    .split(" ")
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2);
 
 export default function Page() {
   const figures = [
@@ -162,79 +155,6 @@ export default function Page() {
               Read our full HSE commitment
             </Link>
           </p>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section aria-labelledby="leadership-heading" className="py-14 md:py-24">
-        <div className="container-site">
-          <h2
-            id="leadership-heading"
-            className="mb-7 sm:mb-10 font-display text-[26px] font-light text-ink sm:text-4xl"
-          >
-            Leadership
-          </h2>
-          {/* Leaders with a bio: photo beside the bio. The source photo is 234 px wide, so it is shown near that size. */}
-          {leadership
-            .filter((l) => l.bio)
-            .map((l) => (
-              <article
-                key={l.name}
-                className="mb-12 grid grid-cols-1 items-start gap-8 sm:grid-cols-[234px_minmax(0,1fr)] sm:gap-12"
-              >
-                <div className="relative aspect-[234/318] w-full max-w-[234px] overflow-hidden bg-mist">
-                  {l.photo ? (
-                    <Image src={l.photo.src} alt={l.photo.alt} fill sizes="234px" className="object-cover object-top" />
-                  ) : (
-                    <span
-                      aria-hidden="true"
-                      className="flex h-full items-center justify-center font-display text-6xl font-light text-indigo"
-                    >
-                      {initials(l.name)}
-                    </span>
-                  )}
-                </div>
-                <div className="max-w-2xl">
-                  <h3 className="font-display text-2xl font-medium text-ink">{l.name}</h3>
-                  <p className="mt-1 font-label text-[13px] font-bold tracking-[0.14em] text-blue uppercase">
-                    {l.role}
-                  </p>
-                  <div className="mt-5 flex flex-col gap-4 text-slate">
-                    {l.bio?.map((para) => (
-                      <p key={para.slice(0, 24)}>{para}</p>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-
-          {leadership.some((l) => !l.bio) && (
-            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {leadership
-                .filter((l) => !l.bio)
-                .map((l) => (
-                  <li key={l.name}>
-                    <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-mist">
-                      {l.photo ? (
-                        <Image
-                          src={l.photo.src}
-                          alt={l.photo.alt}
-                          fill
-                          sizes="(min-width: 1024px) 25vw, 50vw"
-                          className="object-cover"
-                        />
-                      ) : (
-                        <span aria-hidden="true" className="font-display text-6xl font-light text-indigo">
-                          {initials(l.name)}
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="mt-4 font-display text-xl font-medium text-ink">{l.name}</h3>
-                    <p className="text-slate">{l.role}</p>
-                  </li>
-                ))}
-            </ul>
-          )}
         </div>
       </section>
 
